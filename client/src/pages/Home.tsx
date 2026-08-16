@@ -7,6 +7,7 @@ import {
   BrainCircuit,
   CircuitBoard,
   FlaskConical,
+  Github,
   Menu,
   Orbit,
   ScanLine,
@@ -21,6 +22,8 @@ const heroImage = "/manus-storage/owais-mission-hero_584f8cb0.jpg";
 const biologyImage = "/manus-storage/owais-biology-ai_e6b249d9.jpg";
 const visionImage = "/manus-storage/owais-vision-hardware_f7a41c6b.jpg";
 const atlasImage = "/manus-storage/owais-project-atlas_db246c5f.jpg";
+const githubRepository = "https://github.com/justahumanbuddy/owais-nasa-portfolio";
+const githubPages = "https://justahumanbuddy.github.io/owais-nasa-portfolio/";
 
 const navItems = [
   ["01", "Trajectory", "#trajectory"],
@@ -157,6 +160,9 @@ export default function Home() {
                 <a href="#trajectory" className="inline-flex items-center gap-3 bg-[#f6f1e7] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-[#0a1b2a] transition-transform hover:-translate-y-0.5 active:scale-[0.97]">
                   Trace the trajectory <ArrowDown className="h-4 w-4 text-[#ff5a3c]" />
                 </a>
+                <a href={githubRepository} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-[#b7c9d5]/50 px-4 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#e2ebef] transition-colors hover:border-[#ff5a3c] hover:text-[#ff8c74] active:scale-[0.97]">
+                  <Github className="h-3.5 w-3.5" /> Source code
+                </a>
                 <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#a5b7c6]">Curiosity is the common thread.</span>
               </div>
             </div>
@@ -262,7 +268,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-[#06111b] px-5 py-8 sm:px-8 lg:px-12 xl:pl-[86px]"><div className="mx-auto flex max-w-[1540px] flex-col gap-5 text-[10px] font-bold uppercase tracking-[0.17em] text-[#9ab0c2] sm:flex-row sm:items-center sm:justify-between"><div className="flex items-center gap-3"><MissionMark size="h-7 w-7" /><span>Owais / Personal mission dossier</span></div><span>Karnataka, India · {new Date().getFullYear()}</span><span className="text-[#ff6d50]">Curiosity in active orbit</span></div></footer>
+      <footer className="bg-[#06111b] px-5 py-8 sm:px-8 lg:px-12 xl:pl-[86px]"><div className="mx-auto flex max-w-[1540px] flex-col gap-5 text-[10px] font-bold uppercase tracking-[0.17em] text-[#9ab0c2] sm:flex-row sm:items-center sm:justify-between"><div className="flex items-center gap-3"><MissionMark size="h-7 w-7" /><span>Owais / Personal mission dossier</span></div><div className="flex flex-wrap items-center gap-4"><a href={githubRepository} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#f6f1e7]">GitHub source</a><a href={githubPages} target="_blank" rel="noreferrer" className="transition-colors hover:text-[#f6f1e7]">GitHub Pages</a><span className="text-[#ff6d50]">Curiosity in active orbit</span></div></div></footer>
     </div>
   );
 }
